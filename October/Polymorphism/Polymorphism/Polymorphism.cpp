@@ -58,7 +58,7 @@ public:
 int main()
 {
     //Vector to populate
-    vector<Vehicle*> vehicles; 
+    vector<Vehicle*> vehicles;
 
     //Allocating memory from the freestore
     Bike* newBike = new Bike;
@@ -86,7 +86,7 @@ int main()
 
         if (bike != NULL) { bike->ParkBike(); }
         if (train != NULL) { train->CheckTickets(); }
-        if (car != NULL) { car->ParkCar(); }       
+        if (car != NULL) { car->ParkCar(); }
     }
 
     //Clearing Up
