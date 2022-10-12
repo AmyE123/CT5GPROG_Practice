@@ -60,15 +60,10 @@ int main()
     //Vector to populate
     vector<Vehicle*> vehicles;
 
-    //Allocating memory from the freestore
-    Bike* newBike = new Bike;
-    Train* newTrain = new Train;
-    Car* newCar = new Car;
-
-    //Populating vector
-    vehicles.push_back(newBike);
-    vehicles.push_back(newTrain);
-    vehicles.push_back(newCar);
+    //Populating vector & allocating memory from the freestore
+    vehicles.push_back(new Bike);
+    vehicles.push_back(new Train);
+    vehicles.push_back(new Car);
 
     //Iterating through vector and running draw function
     for (int i = 0; i < vehicles.size(); i++)
@@ -87,10 +82,10 @@ int main()
         if (bike != NULL) { bike->ParkBike(); }
         if (train != NULL) { train->CheckTickets(); }
         if (car != NULL) { car->ParkCar(); }
-    }
 
-    //Clearing Up
-    delete newBike;
-    delete newTrain;
-    delete newCar;
+        //Clearing Up
+        delete bike;
+        delete train;
+        delete car;
+    }
 }
